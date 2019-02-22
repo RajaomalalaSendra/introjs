@@ -20,6 +20,41 @@ const entrepreneurs = [
 // Réalise un script script_6.js qui répondra dans la console aux questions suivantes :
 
 //     Filtre dans cette liste les entrepreneurs qui sont nés dans les années 70
-//     Sors une array qui combien le prénom et le nom des entrepreneurs
+var year = [], year_70 =  [];
+for (var i = 0; i < entrepreneurs.length; i++) {
+          year.push(entrepreneurs[i]["year"]);
+          if (year[i] < 1980 && year[i] >= 1970) {
+            year_70.push(entrepreneurs[i]["first"] + " " + entrepreneurs[i]["last"]);
+  }
+}
+console.log("Filtre dans cette liste les entrepreneurs qui sont nés dans les années 70:");
+for (var i = 0; i < year_70.length; i++) {
+    console.log(year_70[i]);
+}
+//     Sors une array qui combinne le prénom et le nom des entrepreneurs
+var nom_et_prenom = [];
+for (var i = 0; i < entrepreneurs.length; i++) {
+            nom_et_prenom.push(entrepreneurs[i]["first"] + " " + entrepreneurs[i]["last"]);
+}
+console.log(`Un array qui combine le prénom et le nom des entrepreneurs: ${nom_et_prenom}`);
 //     Quel âge aurait chaque inventeur aujourd'hui ?
+var age_2019 = [];
+for (var i =  0; i < entrepreneurs.length; i++) {
+            age_2019.push(parseInt(2019 - entrepreneurs[i]["year"]));
+}
+console.log(age_2019[1]);
+console.log("L'âge aurait chaque inventeur aujourd'hui: ");
+var j = 0;
+var the_real_age_2019 = [];
+while (j < age_2019.length) {
+        console.log(`${nom_et_prenom[j]}:  ${parseInt(age_2019[j])} ans.`);
+        j++
+}
 //     Trie les inventeurs par ordre alphabétique du nom de famille
+var last = [], another = [];
+for (var i = 0; i < entrepreneurs.length; i++) {
+      last.push(entrepreneurs[i]["last"] + " " + entrepreneurs[i]["first"]);
+      another.push(entrepreneurs[i]["first"] + " " + entrepreneurs[i]["last"]);
+}
+console.log(last.sort());
+console.log(another.sort());
