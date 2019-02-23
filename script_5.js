@@ -63,7 +63,7 @@ for (var i = 0; i < hash3.length; i++) {
 	}
 }
 const max_in_six_mille = Math.max(...inf_six_mille2);
-var values = Object.values(myHash), keys = Object.keys(myHash), max_in_six_mille_name;
+var values = Object.values(myHash), keys = Object.keys(myHash), max_in_six_mille_namei;
 for (var i = 0; i < hash3.length; i++) {
 	if (parseFloat(values[i]) === max_in_six_mille){
 		max_in_six_mille_name = keys[i];
